@@ -38,5 +38,5 @@ public class TutorialResource {
 
 		return Response.ok(tutorial).build();
 	}
-
+	
 }

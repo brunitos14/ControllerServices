@@ -12,23 +12,15 @@ import br.com.controllerservices.models.Tutorial;
 import br.com.controllerservices.models.User;
 
 @Service
-public class TutorialService {
+public class LoginService {
 
 private final List<Tutorial> tutorials = new ArrayList<>();
 
-private final User users = new User();
+private final User users = new User("teste","teste", 0, new ArrayList<Rule>());
 
 	@PostConstruct
 	public void init() {
 		tutorials.add(new Tutorial(1l, "Tutorial1", "Tutorial 1 Description", 1l, 1l));
-	}
-
-	public Tutorial getById(Long tutorialId) {
-		return tutorials.get(0);
-	}
-
-	public List<Tutorial> getAllTutorials() {
-		return tutorials;
 	}
 
 	public User getUser(String user){
