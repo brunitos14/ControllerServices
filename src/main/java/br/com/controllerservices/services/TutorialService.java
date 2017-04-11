@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Service;
 
-import br.com.controllerservices.models.Rule;
+import br.com.controllerservices.models.RuleType;
 import br.com.controllerservices.models.Tutorial;
 import br.com.controllerservices.models.User;
 
