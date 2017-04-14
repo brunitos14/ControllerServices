@@ -1,47 +1,39 @@
 package br.com.controllerservices.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
-/**
- * @author Bruno
- *
- */
 @Entity
-@Table(name = "tb_users")
-public class User{
+@Table(name = "tb_studio")
+public class Studio{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_user")
-	private Long idUser;
+    @Column(name = "id_studio")
+	private Long idStudio;
 
 	@Column(name = "name")
 	private String name;
 
-	@Column(name = "password")
-	private String password;
-
 	@Column(name = "email")
-    private String email;
+	private String email;
 
-	@Column(name = "cel")
-    private Long cel;
+	@Column(name = "adress")
+    private String adress;
 
-	@Column(name = "status")
-    private Integer status;
+	@Column(name = "complement")
+    private String complement;
+
+	@Column(name = "adress_number")
+    private Integer adressNumber;
 
 	@Column(name = "dt_create")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -54,19 +46,12 @@ public class User{
 	@Column(name = "user_create")
     private String userCreate;
 
-	@ManyToOne
-	@JoinColumn(name="id_rule_type", referencedColumnName="id_rule_type")
-    private RuleType rules;
-
-	@Transient
-	private List<RuleType> listRules;
-
-	public Long getIdUser() {
-		return idUser;
+	public Long getIdStudio() {
+		return idStudio;
 	}
 
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
+	public void setIdStudio(Long idStudio) {
+		this.idStudio = idStudio;
 	}
 
 	public String getName() {
@@ -77,14 +62,6 @@ public class User{
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -93,20 +70,28 @@ public class User{
 		this.email = email;
 	}
 
-	public Long getCel() {
-		return cel;
+	public String getAdress() {
+		return adress;
 	}
 
-	public void setCel(Long cel) {
-		this.cel = cel;
+	public void setAdress(String adress) {
+		this.adress = adress;
 	}
 
-	public Integer getStatus() {
-		return status;
+	public String getComplement() {
+		return complement;
 	}
 
-	public void setStatus(Integer status) {
-		this.status = status;
+	public void setComplement(String complement) {
+		this.complement = complement;
+	}
+
+	public Integer getAdressNumber() {
+		return adressNumber;
+	}
+
+	public void setAdressNumber(Integer adressNumber) {
+		this.adressNumber = adressNumber;
 	}
 
 	public Date getDtCreate() {
@@ -131,22 +116,6 @@ public class User{
 
 	public void setUserCreate(String userCreate) {
 		this.userCreate = userCreate;
-	}
-
-	public RuleType getRules() {
-		return rules;
-	}
-
-	public void setRules(RuleType rules) {
-		this.rules = rules;
-	}
-
-	public List<RuleType> getListRules() {
-		return listRules;
-	}
-
-	public void setListRules(List<RuleType> listRules) {
-		this.listRules = listRules;
 	}
 
 
