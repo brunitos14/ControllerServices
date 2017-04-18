@@ -36,11 +36,11 @@ public class StudioUserRel{
     private Integer status;
 
 	@Column(name = "dt_create")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtCreate;
 
 	@Column(name = "dt_update")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtUpdate;
 
 	public Long getIdStudioUserRel() {

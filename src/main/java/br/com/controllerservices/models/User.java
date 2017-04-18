@@ -32,23 +32,23 @@ public class User{
 	private String name;
 
 	@Column(name = "password")
-	private String password;
+	private Integer password;
 
 	@Column(name = "email")
     private String email;
 
 	@Column(name = "cel")
-    private Long cel;
+    private Integer cel;
 
 	@Column(name = "status")
     private Integer status;
 
 	@Column(name = "dt_create")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtCreate;
 
 	@Column(name = "dt_update")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtUpdate;
 
 	@Column(name = "user_create")
@@ -77,14 +77,6 @@ public class User{
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -93,13 +85,6 @@ public class User{
 		this.email = email;
 	}
 
-	public Long getCel() {
-		return cel;
-	}
-
-	public void setCel(Long cel) {
-		this.cel = cel;
-	}
 
 	public Integer getStatus() {
 		return status;
@@ -147,6 +132,22 @@ public class User{
 
 	public void setListRules(List<RuleType> listRules) {
 		this.listRules = listRules;
+	}
+
+	public Integer getCel() {
+		return cel;
+	}
+
+	public void setCel(Integer cel) {
+		this.cel = cel;
+	}
+
+	public Integer getPassword() {
+		return password;
+	}
+
+	public void setPassword(Integer password) {
+		this.password = password;
 	}
 
 

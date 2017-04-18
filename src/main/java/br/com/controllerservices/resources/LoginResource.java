@@ -2,7 +2,6 @@ package br.com.controllerservices.resources;
 
 import java.util.ArrayList;
 
-import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -18,16 +17,12 @@ import org.springframework.stereotype.Component;
 import br.com.controllerservices.models.RuleType;
 import br.com.controllerservices.models.User;
 import br.com.controllerservices.repository.UserRepository;
-import br.com.controllerservices.services.LoginService;
 
 @Component
 @Path("/account")
 public class LoginResource {
 
 	public static final Logger logger = LoggerFactory.getLogger(LoginResource.class);
-
-	@Inject
-	private LoginService loginService;
 
 	@Autowired
     private UserRepository userRepository;

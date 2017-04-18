@@ -18,7 +18,7 @@ public class Studio{
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_studio")
-	private Long idStudio;
+	private Integer idStudio;
 
 	@Column(name = "name")
 	private String name;
@@ -36,23 +36,15 @@ public class Studio{
     private Integer adressNumber;
 
 	@Column(name = "dt_create")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtCreate;
 
 	@Column(name = "dt_update")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
     private Date dtUpdate;
 
 	@Column(name = "user_create")
     private String userCreate;
-
-	public Long getIdStudio() {
-		return idStudio;
-	}
-
-	public void setIdStudio(Long idStudio) {
-		this.idStudio = idStudio;
-	}
 
 	public String getName() {
 		return name;
@@ -116,6 +108,14 @@ public class Studio{
 
 	public void setUserCreate(String userCreate) {
 		this.userCreate = userCreate;
+	}
+
+	public Integer getIdStudio() {
+		return idStudio;
+	}
+
+	public void setIdStudio(Integer idStudio) {
+		this.idStudio = idStudio;
 	}
 
 
